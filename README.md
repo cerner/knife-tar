@@ -10,16 +10,15 @@ chef server as well as downloading components from chef-server to tar.gz format.
 Why?
 ----
 
-This originally started when my team was looking into the best way to 'release' our
+This originally started when we were looking into the best way to 'release' our
 cookbooks. Numerous sources online will tell you that the suggested way to 'release'
 a cookbook is to create a tag in your source control manager and upload your cookbook
 from that tag. There are even chef plugins for uploading cookbooks from git as well as
 other tools like [berkshelf](http://berkshelf.com/) that allow you to download cookbooks 
 from github. This idea didn't really mesh well with the way we would release our artifacts 
-which was to push everything into a maven repository. From there we came up with the idea of 
-dropping all of our cookbook's files into a compressed file and push that out to our 
-repositories. We chose tar files because they seem to be the most common way to combine files
-into a single file. 
+which was to push everything into an artifact repository. From there we came up with the idea of 
+dropping all of our cookbook's files into a tar file and push that out to our 
+repositories.
 
 Being beginners at chef we often ran into the issue where we wanted to upload our cookbook 
 to the chef-server but we forgot to include the dependencies. From that we decided our tar 
