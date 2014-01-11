@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.summary     = "A Chef knife plugin to install/upload chef components from a tar file or url"
   s.description = "This is a knife plugin for Chef which can install and upload chef components from a tar file or url"
   s.homepage    = 'http://github.com/Cerner/knife-tar'
-
+  s.license     = 'Apache License, Version 2.0'
   s.files       = Dir['lib/**/*.rb', 'Gemfile', 'Rakefile', 'README.md']
   
   s.add_dependency 'chef', '>= 0.10.0'
