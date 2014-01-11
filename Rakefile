@@ -22,14 +22,15 @@ def deployGem
 end
 
 def release
-  
+ 
+  rawVersion = `cat VERSION`.chomp
+ 
   #Tag the release
   puts "Tagging the release"
   runCommand "git tag -a #{rawVersion} -m 'Released #{rawVersion}'"
   runCommand "git push origin #{rawVersion}"
   
   # Update bump VERSION file
-  rawVersion = `cat VERSION`.chomp
   versions = rawVersion.split "."
   versions[1] = versions[1].to_i + 1
   newVersion = versions.join "."
