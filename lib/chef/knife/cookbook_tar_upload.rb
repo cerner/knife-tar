@@ -1,5 +1,6 @@
 require 'chef/knife'
 require 'chef/cookbook/metadata'
+require 'chef/cookbook_loader'
 require 'chef/cookbook_uploader'
 require 'chef/tar_file'
 require 'tmp_directory'
