@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.license     = 'Apache License, Version 2.0'
   s.files       = Dir['lib/**/*.rb', 'Gemfile', 'Rakefile', 'README.md']
   
-  s.add_dependency 'chef', '>= 0.10.0'
+  s.add_dependency 'chef', '>= 11.0.0'
+  s.add_dependency 'yajl-ruby', '~> 1.1'
   s.add_development_dependency 'rake', '~> 0.9.2.2'
 end
