@@ -22,12 +22,6 @@ class Chef
         # Attempt to upload all the components in the tar file
         # If our tar file does not contain a component ignore the error and skip it
         begin
-          ClientTarUpload.upload_clients tar_file
-        rescue TarFile::MissingChefComponentError => e
-          ui.info("No Client files to upload")
-        end
-        
-        begin
           CookbookTarUpload.upload_cookbooks tar_file
         rescue TarFile::MissingChefComponentError => e
           ui.info("No Cookbooks to upload")

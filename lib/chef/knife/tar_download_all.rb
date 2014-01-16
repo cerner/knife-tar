@@ -19,7 +19,6 @@ class Chef
         
         tar_file = Chef::TarFile.new(@name_args.first, true)
         
-        ClientTarDownload.download_clients tar_file
         CookbookTarDownload.download_cookbooks tar_file
         DataBagTarDownload.download_data_bags tar_file
         EnvironmentTarDownload.download_environments tar_file

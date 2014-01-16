@@ -7,6 +7,26 @@ Description
 A knife plugin facilitating uploading chef components from a tar.gz file/url to your 
 chef server as well as downloading components from chef-server to tar.gz format.
 
+Installation
+------------
+
+Install the chef gem prior to installing knife-tar.
+
+    gem install knife-tar
+
+Requirements
+------------
+
+* Chef >= 11
+* `tar` is installed and on your `$PATH`
+
+Branches
+--------
+
+ * 1.X - Supports Chef 10
+ * 2.X - Supports Chef 11
+   * Lost support for API Clients
+
 Why?
 ----
 
@@ -27,19 +47,6 @@ point others were asking about adding support for roles or environments, that is
 realized we could support all of the chef components and modeled the format after Opscode's 
 [chef-repo](https://github.com/opscode/chef-repo). From there we included the download 
 functionality and supported multiple versions of the same cookbook.
-
-Installation
-------------
-
-Install the chef gem prior to installing knife-tar.
-
-    gem install knife-tar
-
-Requirements
-------------
-
-* Chef >= 0.10.10 (Does not work with Chef 11)
-* `tar` is installed and on your `$PATH`
 
 Conventions
 -----------
@@ -63,9 +70,7 @@ We assume that the tar file will look like,
 |- roles  
 | |- \[roleName\].\[json|js|rb\]  
 |- web_users  
-| |- \[webUserName\].\[json|js|rb\]  
-|- api_clients  
-| | - \[clientName\].\[json|js|rb\]  
+| |- \[webUserName\].\[json|js|rb\]   
 |- nodes  
 | |- \[nodeName\].\[json|js|rb\]  
 
@@ -83,9 +88,7 @@ OR
 | |- roles  
 | | |- \[roleName\].\[json|js|rb\]  
 | |- web_users  
-| | |- \[webUserName\].\[json|js|rb\]  
-| |- api_clients  
-| | | - \[clientName\].\[json|js|rb\]  
+| | |- \[webUserName\].\[json|js|rb\]   
 | |- nodes  
 | | |- \[nodeName\].\[json|js|rb\]  
 
@@ -175,23 +178,12 @@ following command,
 
 Command: 'knife node tar upload tarPath (options)'
 
-#### Web UI Users
+#### Users
 
 If you want to upload only your users from your tar file you can use the
 following command,
 
 Command: 'knife user tar upload tarPath (options)'
-
-
-#### API Clients
-
-**NOTE**: This command requires that you either be running on the chef-server or
-have configured 'couchdb_url' in your knife.rb to work properly.
-
-If you want to upload only your clients from your tar file you can use the
-following command,
-
-Command: 'knife client tar upload tarPath (options)'
 
 ### Downloading
 
@@ -237,14 +229,7 @@ can use the following command,
 
 Command: 'knife role tar download tarPath (options)'
 
-#### Api Clients
-
-If you want to download all your api clients from chef-server to a tar file you
-can use the following command,
-
-Command: 'knife client tar download tarPath (options)'
-
-#### Web UI Users
+#### Users
 
 If you want to download all your web ui users from chef-server to a tar file you
 can use the following command,
