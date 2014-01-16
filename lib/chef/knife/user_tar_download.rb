@@ -1,7 +1,7 @@
 require 'chef/knife'
 require 'chef/knife/core/object_loader'
 require 'chef/json_compat'
-require 'chef/webui_user'
+require 'chef/user'
 
 class Chef
   class Knife
@@ -26,9 +26,9 @@ class Chef
       
       def self.download_users(tar_file)
         dir = tar_file.web_users_path
-        Chef::WebUIUser.list.each do |component_name, url|
+        Chef::User.list.each do |component_name, url|
           Chef::Log.info("Backing up user #{component_name}")
-          component_obj = Chef::WebUIUser.load(component_name)
+          component_obj = Chef::User.load(component_name)
           File.open(File.join(dir, "#{component_name}.json"), "w") do |component_file|
             component_file.print(component_obj.to_json)
           end

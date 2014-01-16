@@ -37,7 +37,7 @@ class Chef
             ApiClient.load(client.name).destroy
           end
           
-          client.cdb_save
+          client.save
           
           ui.info("Updated Client : #{client.name}")
           
