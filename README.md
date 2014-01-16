@@ -19,12 +19,28 @@ Requirements
 * Chef >= 11
 * `tar` is installed and on your `$PATH`
 
-Branches
---------
+Version, Chef Support and Branches
+----------------------------------
 
- * 1.X - Supports Chef 10
- * 2.X - Supports Chef 11
-   * Lost support for API Clients
+Here is a table listing the gem version, chef support and what branch that version is being developed on.
+
+<table>
+<tr>
+<th>Version</th>
+<th>Chef Support</th>
+<th>Branch</th>
+</tr>
+<tr>
+<td>1.X</td>
+<td>Chef 10</td>
+<td>1.X</td>
+</tr>
+<tr>
+<td>2.X</td>
+<td>Chef 11</td>
+<td>master</td>
+</tr>
+</table>
 
 Why?
 ----
