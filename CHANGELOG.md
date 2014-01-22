@@ -1,13 +1,13 @@
 Change Log
 ==========
 
-[2.0](https://github.com/cerner/knife-tar/issues?milestone=1&state=open)
------
+[2.0.0](https://github.com/cerner/knife-tar/issues?milestone=1&state=closed)
+----------------------------------------------------------------------------
 
- * Supports Chef 11
- * Lost support for API Clients
+  * [Feature] [Issue-1](https://github.com/cerner/knife-tar/issues/1) : Support Chef 11
 
-1.3
----
+[1.3.0](https://github.com/cerner/knife-tar/issues?milestone=2&state=closed)
+----------------------------------------------------------------------------
 
- * Initial working cookbook that supports Chef 10
+  * [Feature] [Issue-5](https://github.com/cerner/knife-tar/issues/5) : Initial gem
+
