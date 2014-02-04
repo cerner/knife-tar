@@ -14,6 +14,6 @@ Gem::Specification.new do |s|
   # Removes gem build warning
   s.rubyforge_project = "nowarning"
   
-  s.add_dependency 'chef', '>= 0.10.0'
+  s.add_dependency 'chef', '~> 10.12'
   s.add_development_dependency 'rake', '~> 0.9.2.2'
 end
