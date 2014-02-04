@@ -7,6 +7,8 @@ Description
 A knife plugin facilitating uploading chef components from a tar.gz file/url to your 
 chef server as well as downloading components from chef-server to tar.gz format.
 
+View the [Change Log](CHANGELOG.md) to see what has changed.
+
 Why?
 ----
 
