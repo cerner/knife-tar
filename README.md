@@ -149,10 +149,6 @@ to your tar file on your local filesystem or a url.
 
 #### Everything
 
-**NOTE**: If you have api clients in your tar file this command requires that you 
-either be running on the chef-server or have configured 'couchdb_url' in your 
-knife.rb to work properly.
-
 If you want to upload all your chef resources from your tar file you can use the
 following command,
 
